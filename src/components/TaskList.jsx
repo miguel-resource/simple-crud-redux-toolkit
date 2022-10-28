@@ -1,7 +1,15 @@
-import React from 'react'
+import { useSelector } from 'react-redux';
+import TaskItem  from './TaskItem'
 
 export default function TaskList() {
-  return (
-    <div>TaskList</div>
-  )
+
+    const tasks = useSelector(data => data.tasks);
+
+    return (
+        <div>
+            {tasks.map(task => (
+               <TaskItem key={task.id}></TaskItem> 
+            ))}
+        </div>
+    )
 }
