@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 export default function TaskList() {
 
     const tasks = useSelector(data => data.tasks);
-    console.log(tasks);
 
     return (
         /* low priority */

@@ -33,13 +33,15 @@ const taskSlice = createSlice({
       }
     },
     editTask: (state, action) => {
-      const id = action.payload.id
-      const taskEdit = action.payload
+      const { id, title, description, priority } = action.payload
       const taskIndex = state.findIndex(task => task.id === id);
 
-      state[taskIndex].title = taskEdit.title
-      state[taskIndex].description = taskEdit.description
-      state[taskIndex].priority = taskEdit.priority
+
+
+      state[taskIndex].title = title
+      state[taskIndex].description = description
+      state[taskIndex].priority = priority
+
 
     }
   }
