@@ -40,7 +40,7 @@ export default function TaskForm() {
         ...task,
         id: uuid(),
         completed: false,
-        date: date.getDate("es-MX")
+        date: date.toLocaleDateString("es-MX")
       }))
 
     }
@@ -91,10 +91,20 @@ export default function TaskForm() {
           </select>
         </div>
 
-        <button
-          className="border-blue-700 hover:bg-blue-700 border-2 p-2 rounded-2xl w-1/2 text-white font-semibold">
-          + Task
-        </button>
+
+        {params.id ?
+
+          <button
+            className="border-green-700 hover:bg-green-700 border-2 p-2 rounded-2xl w-1/2 text-white font-semibold">
+            Edit task
+          </button>
+          :
+
+          <button
+            className="border-blue-700 hover:bg-blue-700 border-2 p-2 rounded-2xl w-1/2 text-white font-semibold">
+            + Task
+          </button>
+        }
       </form>
     </div>
   )

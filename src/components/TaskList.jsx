@@ -14,7 +14,7 @@ export default function TaskList() {
                 className="bg-slate-300 p-3 rounded-xl block mb-3 w-1/5 text-center hover:bg-slate-50">
                 Create
             </Link>
-            <div className="bg-emerald-500/50 rounded-lg p-3 mb-3">
+            <div className="bg-emerald-500/50 mx-auto rounded-lg p-3 mb-3">
                 <h3 className="font-mono  text-slate-200 text-xl">Low priority</h3>
                 {tasks.map(task => {
                     if (task.priority === "low") {

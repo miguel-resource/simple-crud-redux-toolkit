@@ -20,7 +20,7 @@ export default function TaskItem({ title, id, date, completed, description }) {
       className="bg-zinc-800 rounded-lg w-10/12 mx-auto mt-3 p-2 shadow-md shadow-gray-900	">
 
       <div className="grid grid-cols-2">
-        <h3 className="text-slate-200  tracking-widest">
+        <h3 className="text-slate-200  tracking-widest | lg:w-1/2">
           {title}
         </h3>
 
@@ -46,8 +46,8 @@ export default function TaskItem({ title, id, date, completed, description }) {
       </div>
 
       <div
-        className="text-sm text-slate-300 tracking-wide">
-        {description}
+        className="text-sm text-slate-300 tracking-wide mt-3">
+         {description}
       </div>
 
       <Link
